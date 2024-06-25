@@ -58,23 +58,38 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center(
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('lib/images/illustration.png'),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                    Colors.white.withOpacity(0.8),
+                    BlendMode.colorDodge,
+                  ),
+                ),
+              ),
+            ),
+        Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 50),
                 const Icon(
-                  Icons.lock,
+                  Icons.flight_takeoff_outlined,
                   size: 100,
+                  color: Colors.blue,
                 ),
                 const SizedBox(height: 50),
                 Text(
-                  'Welcome back you\'ve been missed!',
+                  'Register if you don\'t have any account!',
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Colors.blue,
                     fontSize: 16,
                   ),
                 ),
@@ -132,17 +147,17 @@ class _RegisterPageState extends State<RegisterPage> {
                     SquareTile(
                         onTap: () => AuthService().signInWithGoogle(),
                         imagePath: 'lib/images/google.png'),
-                    const SizedBox(
-                      width: 25,
-                    ),
-                    SquareTile(onTap: () {}, imagePath: 'lib/images/apple.png'),
+                    // const SizedBox(
+                    //   width: 25,
+                    // ),
+                    // SquareTile(onTap: () {}, imagePath: 'lib/images/apple.png'),
                   ],
                 ),
                 const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Already have an account?'),
+                    const Text('Already have an account?', style: TextStyle(color: Colors.grey),),
                     const SizedBox(width: 4),
                     GestureDetector(
                       onTap: widget.onTap,
@@ -158,6 +173,8 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
         ),
+          ],
+      ),
       ),
     );
   }

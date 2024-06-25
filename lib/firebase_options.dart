@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAvWxvcrzeYVR-RtR4qG8Zl3GCpSXwnGqU',
-    appId: '1:859067251975:android:7db59dff7c13df84f899a2',
+    appId: '1:859067251975:android:9559690b391217b9f899a2',
     messagingSenderId: '859067251975',
     projectId: 'fluttercrudkevin',
     databaseURL: 'https://fluttercrudkevin-default-rtdb.asia-southeast1.firebasedatabase.app',
@@ -74,4 +74,5 @@ class DefaultFirebaseOptions {
     databaseURL: 'https://fluttercrudkevin-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'fluttercrudkevin.appspot.com',
   );
+
 }
