@@ -22,13 +22,13 @@ class CustomSearchDelegate extends SearchDelegate<String?> {
 
   Future<void> _fetchCity() async {
     final url = Uri.parse(
-        'https://nomadlist-digital-nomad-travel-api.p.rapidapi.com/cities?orderBy=total_score&order=desc&page=1&limit=10');
+        'https://nomadlist-digital-nomad-travel-api.p.rapidapi.com/cities?orderBy=total_score&order=desc&page=1&limit=15');
 
     try {
       final response = await http.get(
         url,
         headers: {
-          'X-Rapidapi-Key': '1412490959mshfc3094498a0cc60p16b84cjsnb755d53913d3',
+          'X-Rapidapi-Key': '095f18298amsh70bcfbf81d92a31p141569jsnbb473630481b',
           'X-Rapidapi-Host': 'nomadlist-digital-nomad-travel-api.p.rapidapi.com',
         },
       );

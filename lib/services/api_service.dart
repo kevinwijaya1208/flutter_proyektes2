@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String apiKey = '2be0cf812bd1bc731ccf5fcb'; 
+  final String apiKey = '923bc1b4361bc8578720cea1'; 
   final String baseUrl = 'https://v6.exchangerate-api.com/v6/';
 
   Future<Map<String, dynamic>> getExchangeRates(String baseCurrency) async {
